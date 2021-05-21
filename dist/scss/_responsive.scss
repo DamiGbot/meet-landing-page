@@ -1,0 +1,179 @@
+@include media-md {
+	header {
+		margin: 3rem auto 4.25rem;
+	}
+
+	.hero-box {
+		&_images {
+			&--tablet_mobile {
+				width: auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				// transform: translateX(-1.3rem);
+				width: 100vw;
+			}
+		}
+
+		&_content {
+			margin: auto 20%;
+
+			&--header {
+				margin: auto 13% 1.5rem;
+				font-size: 3rem;
+			}
+		}
+
+		&_btn {
+			flex-direction: row;
+			justify-content: center;
+
+			&--green {
+				margin-bottom: auto;
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	.modern-use {
+		&_images-container {
+			img {
+				width: 10.25rem;
+				height: 9.75rem;
+			}
+		}
+
+		&_content {
+			margin: auto 12.7%;
+
+			&--sub-header {
+				margin-bottom: 1rem;
+			}
+
+			&--header {
+				margin: auto 12% 2rem;
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	.footer {
+		&_container {
+			width: 100%;
+			background-image: linear-gradient(
+					rgba(77, 150, 169, 0.9),
+					rgba(77, 150, 169, 0.9)
+				),
+				url(/dist/starter-code/assets/tablet/image-footer.jpg);
+			&_content {
+				margin: auto 12.7% !important;
+
+				&--header {
+					font-size: 2.5rem !important;
+					margin: auto 10% 2rem !important;
+				}
+
+				&--note {
+					margin-bottom: 2.5rem !important;
+				}
+			}
+		}
+	}
+}
+
+@include media-lg {
+	header {
+		margin: 3rem auto 3.8125rem auto;
+	}
+
+	.hero-box {
+		&_images {
+			&--tablet_mobile {
+				display: none;
+			}
+
+			&--left {
+				display: inline;
+				position: relative;
+				float: left;
+				left: -2rem;
+			}
+
+			&--right {
+				display: inline;
+				position: relative;
+				float: right;
+				right: -2rem;
+			}
+		}
+
+		&_content {
+			margin: auto 31.25% auto;
+			padding-top: 2.9375rem;
+
+			&--header {
+				font-size: 4rem;
+				line-height: 4rem;
+			}
+		}
+	}
+
+	.modern-use {
+		&_images-container {
+			margin-bottom: 5rem;
+			img {
+				width: 15.9375rem;
+				height: 15.125rem;
+			}
+		}
+
+		&_content {
+			margin: auto 31.25% auto;
+
+			&--sub-header {
+				margin-bottom: 1rem;
+			}
+
+			&--note {
+				font-size: 1.125rem;
+				margin: auto 5% 4rem;
+			}
+		}
+	}
+
+	.footer {
+		&_container {
+			background-image: linear-gradient(
+					rgba(77, 150, 169, 0.9),
+					rgba(77, 150, 169, 0.9)
+				),
+				url(/dist/starter-code/assets/desktop/image-footer.jpg) !important;
+			background-size: cover !important;
+			width: 100vw;
+			height: 19.25rem !important;
+
+			&_content {
+				display: flex;
+				flex-direction: row !important;
+				align-items: center;
+				justify-content: space-evenly !important;
+				margin: auto 11.4% !important;
+
+				&--header {
+					margin-right: 7.8125rem !important;
+					margin-left: 0 !important;
+					width: 21.875rem !important;
+					line-height: 2.75rem !important;
+					text-align: left;
+				}
+
+				&--note {
+					margin-bottom: 0 !important;
+					margin-right: 5.75rem;
+					width: 21.875rem !important;
+					text-align: left;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+@import "./config", "./hero-box", "./modern_use", "./responsive";
+
+body {
+	font-family: $primary_font;
+	background-color: #fafafa;
+	line-height: 1.625rem;
+	overflow-x: hidden;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	margin: 3rem auto 3.375rem auto;
+}
+
+main {
+	width: 100%;
+}
+
+.footer {
+	text-align: center;
+	width: 100%;
+	position: relative;
+
+	&_number {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&--vl {
+			@include vertical-line;
+		}
+
+		&--number {
+			@include number-button;
+			z-index: 2;
+		}
+	}
+
+	&_container {
+		background-image: linear-gradient(
+				rgba(77, 150, 169, 0.9),
+				rgba(77, 150, 169, 0.9)
+			),
+			url(/dist/starter-code/assets/mobile/image-footer.jpg);
+		background-size: cover;
+		height: 26.75rem;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 7rem;
+
+		color: $neutral_color_two;
+
+		&_content {
+			@include content-container;
+
+			&--header {
+				font-size: 2rem;
+				line-height: 2.25rem;
+				margin-bottom: 1.5rem;
+				font-weight: $header-font-weight;
+			}
+
+			&--note {
+				font-size: 1.125rem;
+				font-weight: $paragraph-font-weight;
+				margin-bottom: 2rem;
+			}
+
+			&--btn__purple {
+				@include button;
+				background-color: $secondary_color_one;
+				width: 12.0625rem;
+
+				&:hover {
+					background-color: #b18bdd;
+					@include transition-ease;
+				}
+			}
+		}
+	}
+}

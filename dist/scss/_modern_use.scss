@@ -1,0 +1,57 @@
+.modern-use {
+	margin-top: 4rem;
+
+	&_number {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&--vl {
+			@include vertical-line;
+		}
+
+		&--number {
+			@include number-button;
+		}
+	}
+
+	&_images-container {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 4rem auto;
+
+		img {
+			width: 9.4375rem;
+			height: 8.9375rem;
+			border-radius: 0.5rem;
+		}
+	}
+
+	&_content {
+		@include content-container;
+
+		&--sub-header {
+			text-transform: uppercase;
+			color: $primary_color_one;
+			font-weight: $header-font-weight;
+			letter-spacing: 0.25rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&--header {
+			font-size: 2rem;
+			font-weight: $header-font-weight;
+			line-height: 2.25rem;
+			margin-bottom: 2rem;
+		}
+
+		&--note {
+			font-weight: $paragraph-font-weight;
+			color: $neutral_color_three;
+			margin-bottom: 4rem;
+		}
+	}
+}

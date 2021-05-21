@@ -1,0 +1,82 @@
+$primary_color_one: #4d96a9;
+$primary_color_two: #bfe3f9;
+
+$secondary_color_one: #855fb1;
+$secondary_color-two: #d9b8ff;
+
+$neutral_color_one: #28283d;
+$neutral_color_two: #fafafa;
+$neutral_color_three: #87879d;
+
+$primary_font: "Red Hat Display", sans-serif;
+
+$header-font-weight: 900;
+$paragraph-font-weight: 500;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin transition-ease {
+	transition: all 0.5s ease-in-out;
+}
+
+@mixin button {
+	height: 3.625rem;
+	border: none;
+	border-radius: 1.8125rem;
+	color: $neutral_color_two;
+	font-weight: $header-font-weight;
+	cursor: pointer;
+}
+
+@mixin download-button {
+	width: 12.0625rem;
+	background-color: $primary_color_one;
+}
+
+@mixin vertical-line {
+	border-right: 1px solid $neutral_color_three;
+	height: 5.25rem;
+	transform: translateX(-50%);
+	opacity: 0.25;
+}
+
+@mixin number-button {
+	width: 3.5rem;
+	height: 3.5rem;
+	background-color: $neutral_color_two;
+	border-radius: 50%;
+	border: 1px solid rgba(135, 135, 157, 0.25);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin content-container {
+	text-align: center;
+	margin: auto 1.5rem;
+}
+
+@mixin middle-hero {
+}
+
+@mixin media-md {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin media-xl {
+	@media screen and (min-width: 1600px) {
+		@content;
+	}
+}

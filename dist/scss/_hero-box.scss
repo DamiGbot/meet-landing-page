@@ -1,0 +1,71 @@
+.hero-box {
+	width: 100%;
+
+	&_images {
+		&--tablet_mobile {
+			position: relative;
+			min-width: 25.875rem;
+			width: 100%;
+			margin-bottom: 3rem;
+			overflow-x: hidden;
+		}
+
+		&--right {
+			display: none;
+		}
+
+		&--left {
+			display: none;
+		}
+	}
+
+	&_content {
+		@include content-container;
+
+		&--header {
+			font-weight: $header-font-weight;
+			font-size: 2.5rem;
+			line-height: 2.75rem;
+			margin: auto 10% 1.5rem;
+		}
+
+		&--note {
+			font-weight: $paragraph-font-weight;
+			color: $neutral_color_three;
+			font-size: 1rem;
+		}
+	}
+
+	&_btn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2rem;
+
+		&--green {
+			margin-bottom: 1rem;
+			@include download-button;
+			@include button;
+
+			&:hover {
+				background-color: #71c0d4;
+				@include transition-ease;
+			}
+
+			&__text {
+				color: $primary_color_two;
+			}
+		}
+
+		&--purple {
+			width: 8.6875rem;
+			background-color: $secondary_color_one;
+			@include button;
+
+			&:hover {
+				background-color: #b18bdd;
+				@include transition-ease;
+			}
+		}
+	}
+}
